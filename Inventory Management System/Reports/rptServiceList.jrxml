@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rptServiceList" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="909246aa-68ab-4276-91fd-a41279b62592">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[YGRiX1JoZWFgLmB0YmxTZXJ2aWNlYCAsMTUsMTUsMzAwZTUwMzMtZTQ3Yy00Y2U0LWJiNjktMmQ4
+YmUyY2FkZTZhOw==]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MySQL_Rhea"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT `Code`,
+	`Service`,
+	`Category`,
+	`Price`,
+	`ID`
+FROM `db_Rhea`.`tblService`]]>
+	</queryString>
+	<field name="Code" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Code"/>
+		<property name="com.jaspersoft.studio.field.label" value="Code"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tblservice"/>
+	</field>
+	<field name="Service" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Service"/>
+		<property name="com.jaspersoft.studio.field.label" value="Service"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tblservice"/>
+	</field>
+	<field name="Category" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Category"/>
+		<property name="com.jaspersoft.studio.field.label" value="Category"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tblservice"/>
+	</field>
+	<field name="Price" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="Price"/>
+		<property name="com.jaspersoft.studio.field.label" value="Price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tblservice"/>
+	</field>
+	<field name="ID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tblservice"/>
+	</field>
+	<sortField name="Category"/>
+	<group name="Category">
+		<groupExpression><![CDATA[$F{Category}]]></groupExpression>
+	</group>
+	<group name="grpCategory">
+		<groupExpression><![CDATA[$F{Category}]]></groupExpression>
+		<groupHeader>
+			<band height="44">
+				<textField>
+					<reportElement x="10" y="0" width="400" height="22" isRemoveLineWhenBlank="true" printWhenGroupChanges="grpCategory" uuid="63cf9e2a-f7ce-44e4-9fca-a5e443e4d952"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Category: " +$F{Category}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="410" y="22" width="100" height="19" uuid="7a9bf1d4-e0c3-4d47-999e-1ba08fb85241"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Price (Php)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="22" width="400" height="18" uuid="e399cdc2-7234-4c74-9675-b66f0f0837bb"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Service]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="22"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="91" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="60" width="399" height="30" uuid="e549fe15-f1e0-49f6-a6e7-6ff5c475a99b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[36 Buenmar Subdivision, Novaliches Proper cor Sarmiento St. Novaliches 1123 Quezon City, Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="0" width="399" height="59" uuid="8f5bc71e-ee17-4457-9e10-e0b669f4e482"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rhea Mercado Hair and Make-up 
+Salon for Men & Women]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="10" width="399" height="30" uuid="d78e9435-efad-43f6-9c6e-9945e34dd2d1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LIST OF SERVICES]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="38" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="0" width="400" height="22" uuid="04a03225-2ad2-4d33-b56b-2233f6230c2c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Service}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="10" y="-2" width="500" height="1" uuid="1ceeb230-1f88-4c28-93ea-d6d294682d11"/>
+			</line>
+			<textField pattern="#,##0.00">
+				<reportElement x="410" y="-2" width="100" height="23" uuid="f9c03908-13be-4644-8e5c-7f601a9c2b81"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Float.valueOf($F{Price})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="27" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="180" y="0" width="100" height="50" uuid="de1cc3fb-9772-47c0-bfcb-acd8c0e3762e"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="280" y="0" width="100" height="50" uuid="982b942c-27d4-4006-82fa-9e2ca32b3e17"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
